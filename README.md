@@ -2,4 +2,4 @@
 
 [exercism.org profil](https://exercism.org/profiles/ahmetenesdur)
 
-![alt text](https://i.imgur.com/W9ZIcnq.png " journey through JavaScript")
+![alt text](https://i.imgur.com/ksYZn86.png " journey through JavaScript")
