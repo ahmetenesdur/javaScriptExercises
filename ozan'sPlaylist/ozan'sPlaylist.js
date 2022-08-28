@@ -25,7 +25,7 @@ export function hasTrack(playlist, track) {
     return new Set(playlist).has(track)
 }
 
-/**
+/*
  * Adds a track to a playlist.
  *
  * @param {string[]} playlist
@@ -33,10 +33,12 @@ export function hasTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function addTrack(playlist, track) {
-    throw new Error('Please implement the addTrack function');
+    playlist = new Set(playlist)
+    playlist.add(track)
+    return [...playlist]
 }
 
-/**
+/*
  * Deletes a track from a playlist.
  *
  * @param {string[]} playlist
@@ -44,15 +46,17 @@ export function addTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function deleteTrack(playlist, track) {
-    throw new Error('Please implement the deleteTrack function');
+    playlist = new Set(playlist)
+    playlist.delete(track)
+    return [...playlist]
 }
 
-/**
+/*
  * Lists the unique artists in a playlist.
  *
  * @param {string[]} playlist
  * @returns {string[]} list of artists
  */
 export function listArtists(playlist) {
-    throw new Error('Please implement the listArtists function');
+    return [...new Set(playlist.map(track => track.split(' - ')[1]))]
 }
