@@ -1,5 +1,5 @@
 export const countWords = (words) => {
-    words = words.toLowerCase().match(/[a-z\d]+(?:'[a-z])?/g)
+    words = words.toLowerCase().match(/\w+(?:'[a-z])?/g);
     console.log(words);
     let wordCount = {};
     words.forEach(word => {
@@ -8,5 +8,4 @@ export const countWords = (words) => {
     return wordCount;
 };
 
-
-console.log(countWords('one,two,three'));
+console.log(countWords("First: don't laugh. Then: don't cry."));
